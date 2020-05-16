@@ -1,0 +1,132 @@
+Esta es la historia de Norvey Perez V.
+
+estaba aprendiedo a programar con Backen y JS
+
+todo empezo por una idea que tenia desde hace mas de un año
+
+sobre la secuencia
+que deben seguir los inspectores que realizan rtmyec
+
+pensando lo bien, todo esto puede funcionar.
+
+good luck
+
+se todo muy bien
+
+para ver la todos los cmabios que se realizaron se escribe el comando
+__________________________________________________________________
+git log archivo (prueba.txt)
+______________________________________________________________________________
+para ver los cambios que se realizaron entre cada commit se escribe el comando
+___________________________________________________________________
+git diff sepone el numero del primer commi  y el segundo commit
+_______________________________________________________________
+si queremos ver el primer archivo se debe
+
+entrar al log del archivo
+__________________________________________________________________
+git reset se pone el numero del commit hard (para q se resete todo y se borra todo)
+git reset se pone el numero del commit slow (se resetea pero se guarda los archivos en la memoria)
+_______________________________________________________________________________________
+con git log --stat  se ven los cambios especificios realizados a cada archivo
+
+se pueden tener varios archivos en el git? si, se pueden tener y a todos se les puede trabajar.
+_______________________________________________________________________________________
+para saber como era el archivo en cualquier punto se utiliza el comando
+
+git checkout se pone el numero del commit nombre de archivo ...
+
+___________________________________________________________________
+PARA AGREGAR LOS CAMBIOS NUEVOS SIN NECESIDD DE ESCRIBIR EL ADD .
+--------------------------------------------------------------------
+git commit -am "mensaje"  --- solo cuando ya exista el archivo anterior
+
+______________________
+CREAR RAMAS 
+_________________________
+se crea desde el lugar donde estoy
+
+git branch nombre de la rama 
+
+PARA MOVER ME EN LA RAMA Q CREER hay que poner el 
+
+git checkout y la rama en donde voy a estar.
+
+
+__________________________
+PARA SABER CUANTAS RAMAS TENGO
+----------------------------------------
+git branch --- como si fueras a crearla pero son escribir ramas--- todo bn
+
+_____________________________________
+MERGE 
+__________________________________
+
+ESTO SIRVE PARA UNIR LAS RAMAS QUE TENGAS
+
+este es el comando para unir las ramaas q tengas con tus colaboradores
+se debe poner en MASTER el head para poder hacer el MERGE sigue los paso
+
+git checkout master  (enter)
+
+git merge (nombre de la rama)
+
+____________________________________________-
+GIT HUB 
+_________________________________________
+es una repositorio en internet, se pueden hacer los mismos cmabio pero desde la web
+vamos a crear una cuenta--- user norve  emal norveypv ---
+lo que cambias en github no li tienes en tu consola y alreves
+
+comando para atraer los codigos desde el respositorio github
+
+git fesh nombre de archivo --- para traer de github
+ 
+git push nombre archivo  --- para mandar al github
+
+git pull nombre de archivo --. para traer y mandar a la vez--
+
+PRIMERO HAY QUE AGREGAR UN ORIGEN el comando es
+
+git remote add origin https://github.com/Norvey/hyperblog-platzi.git (esta direccion viene del github donde dice clonar)
+
+git remote  -- nos muestra los materes
+
+git remote -v muestra lo que hay dentro
+
+HASTA AQUI ESTAMOS LISTO VIENE LA INTERACION ENTRE CONSOLA Y WEB
+
+
+despues de hacer git push origin ---que es para enviar la informacion de tu master al github
+puede salirte esto  (no te preocupes solo es que no has hecho al integracion entre los dos)
+
+! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Norvey/hyperblog-platzi.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+debemos hacer lo siguiente para integrar (hacer integracion entre los dos ) podemos hacer
+git fesh origin master --- para traer
+git push origin master -- para mandar 
+
+o se puede hacer los dos a la vez con
+git pull origin master --- mandar - traer
+
+cuando es por primera vez nos puede arrojar este mensaje de precaucion
+
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 614 bytes | 614.00 KiB/s, done.
+From https://github.com/Norvey/hyperblog-platzi
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+fatal: refusing to merge unrelated histories
+
+para forzar la interacion hacemos lo siguiente
+
+git pull origin master --allow--unrelated-histories

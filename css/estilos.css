@@ -1,0 +1,46 @@
+body
+{text-align: center;
+ background-color: lightyellow;
+
+ color: green;
+ font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#contenedor
+{
+    width: 70%;
+    padding: 1em;
+    text-align: left;
+    border: 1px solid #000;
+    margin: 0 auto;
+}
+
+#post h1
+{
+    font-size: 30px;
+}
+
+
+#cabecera
+{
+    background-color:  #33aa;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5em;
+   width: 70%;
+    
+    
+
+}
+
+#cabecera #tagline
+{
+    padding: 0, 0 ,0 0.5em;
+    font-weight: normal;
+    font-size: 1.5em;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+}

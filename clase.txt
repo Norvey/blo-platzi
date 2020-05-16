@@ -160,18 +160,72 @@ agregar la llave al sistema
 
 ssh-add (se escribe la ruta donde este la llave, solo la privada)
 
+_______________________________________________
+COMANDOS PARA VER LA HISTORIA DEL PROYECTO
+______________________________________________
+
+git log --all   --->mustra todo lo q ha hecho
+
+git log --all --graph  --> muestra de forma un pco mas grafica
+
+git log --all --graph --decorate --oneline  ---> un poco mas grafic
 
 
+________________________________________________
+CREAR ALIAS O ATAJOS
+_______________________________________________
+
+aveces los comandos son muy largos para acordarnos de todo los que tiene se
+pueden crear alias, veamos como se crean con ejemplos
+
+git log --all --graph --decorate --oneline --> como ves es muy largo para recordarlo lo que hacemos
+es muy sencillo
+
+alias nombre (nombre que le quieras dar) ="git log --all --graph --decorate --oneline"  listo
+
+para la clase pusimos 
 
 
+alias arbolito ="git log --all --graph --decorate --oneline"
+
+________________________________________
+CREAR TAG
+_______________________________________
+los tag sirven para hacerles versiones al proyecto para ir identificando cual
+seria el proyecto final para montarlo en la web
+
+pasos para crear TAG 
+
+primero  -copias el hash (numero de id que aparece al comienzo del commit)
+escribe el comando
+
+git tag -a v0.1 -m "mensaje" pegar el tag
+
+PARA SABER A DONDE ESTA CONECTADO EL TAG 
+
+git show-ref --tgas
+
+SE DEBE ENVIAR AL FINAL EL TAG A GITHUB /RECUERDA Q SIEMPRE SE DEBE TRAER LO Q ESTA EN EL GITHUD git pull origin master PRIMERO/
+
+git psuh origin --tags
 
 
+__________________________________
+BORRAR TAG
+__________________________________
 
+git tag ---> se pueden ver los tag q exiten
 
+git tag -d  nombre(nombre del tag que queremos borrar, -d es de delete)
 
+//en gihub no se borra directamente, si lo quiere borrar OJO los tag sirver como referencia y te pueden
+ayudar mas a delante, peri la desicion esta tomada, pon el siguiente comando//
 
+git push origin :refs/tagas/nombre(nombre del tag a borrar)
 
-
+________________________________-
+ENVIAR RAMAS AL GITHUB - INTERNET
+__________________________________
 
 
 

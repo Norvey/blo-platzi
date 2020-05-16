@@ -130,3 +130,48 @@ fatal: refusing to merge unrelated histories
 para forzar la interacion hacemos lo siguiente
 
 git pull origin master --allow--unrelated-histories
+
+
+____________________________________________________
+LLAVES PUBLICAS Y PRIVADAS
+____________________________________________________
+
+proceso de crear llaves es algo algoritmico
+
+se deben crear llaves
+
+yo te mando a ti mi llave publica ---
+se deben crear las dos llaves, una publica y una privada
+
+crear llave, toca en el HOME
+
+sigue el comando 
+
+ssh-keygen -t rsa -b 4096 -C "norveypv@gmail.com" 
+
+(el 4096 es la complejida de la llave) -C (indica el correo)
+ahi pregunta donde va a guardar la llave, dale enter
+
+hay q revisar que si esta prendido el re
+
+eval $(ssh-agent -s)
+
+agregar la llave al sistema
+
+ssh-add (se escribe la ruta donde este la llave, solo la privada)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

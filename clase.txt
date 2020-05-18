@@ -129,7 +129,7 @@ fatal: refusing to merge unrelated histories
 
 para forzar la interacion hacemos lo siguiente
 
-git pull origin master --allow--unrelated-histories
+git pull origin master --allow-unrelated-histories
 
 
 ____________________________________________________

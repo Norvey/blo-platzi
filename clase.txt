@@ -227,5 +227,61 @@ ________________________________-
 ENVIAR RAMAS AL GITHUB - INTERNET
 __________________________________
 
+git show-branch  --> nos muestras cuales son las ramas que exiten cual han sido sus histirias
+
+git show-branch --all --> nos muestrs lo mismo pero con más datos.
+
+gitk  --> abre en software toda la hostoria  (es solo una ayuda-- los programadores trabajand desde la terminal)
+
+para mandar las ramas, primero se crean las ramas
+
+git branch nombre de la ramma -->se crea
+
+entramos a master
+
+git push origin nombre de la rama
+
+_______________________________________
+PARA UNIRSE A UN PROYECTO EXITENT (OTRA PERSONA)
+_________________________________________________
+
+ponemos el comando
+
+git clone https:(aqui va la url q se copia en github) y listo
+
+esa persona puede trabajar en el proyecyo apartir de desde ahi 
+pero cuando vaya a ser un push origin master si no esta agregada no va a poder
+entonces hay q agregar a la persona
+
+PARA AGREGAR 
+___________
+
+desde el repositorio de la empresa.... 
+
+entrea a settign del repositorio
+
+collaborators  y ahi se puede agregar.
+
+______________________________
+NOTA
+____________________________________
+ ---en mastar solo se envia cuando ya este todo listo...
+	----se debe trabajar con ramas....
+
+____________________
+UNIR LAS RAMAS
+___________________
+
+DESDE LA RAMA MASTER SE HACE EL MERGE....
+*master
+
+git merge origin nombre de rama... -->para combinar la rama a la master...
+git pull origin master --->traer se lo q este en github
+git push origin master ---> para mandar 
+
+
+
+
+ 
 
 

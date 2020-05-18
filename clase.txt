@@ -285,3 +285,5 @@ git push origin master ---> para mandar
  
 
 
+__________
+NOTA: TENGO QUE PRACTICAR MÁS

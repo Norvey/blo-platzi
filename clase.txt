@@ -318,7 +318,19 @@ git push origin master (a nuestro repositorio)
 
 
 ______________________________________________
+GIT IGNORE
+______________________________________
 
+no todos lo que hagas deberia ir al repositorio, por ejemplo las imagenes binario o archivos binarios
+
+se debe crear un archivo con la extension .gitignore se debe guardar en la raiz
+
+seria .gitignore --> es una listta de lo que quieres ingnarar o no subir al respositorio.
+
+git add .gitignore  --> debe poner antes de hacer el commit
+
+en el archivoq se crea se ponen todo lo que quieras ignorar en mi caso para el ejemplo de la clase
+ignore los archivos jpg (son binarios y no deberian ir al repositorio)
 
 
 

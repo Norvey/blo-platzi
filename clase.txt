@@ -260,6 +260,7 @@ desde el repositorio de la empresa....
 
 entrea a settign del repositorio
 
+Manage access--
 collaborators  y ahi se puede agregar.
 
 ______________________________
@@ -278,6 +279,45 @@ DESDE LA RAMA MASTER SE HACE EL MERGE....
 git merge origin nombre de rama... -->para combinar la rama a la master...
 git pull origin master --->traer se lo q este en github
 git push origin master ---> para mandar 
+
+
+____________________________________
+OPEN SOURCE
+_____________________________________
+
+Fork --->  es tomar una copia del proyecyo y hacerlo mio (solo publico)
+
+se le da en fork para copiar el proyecyo (parte superior derecha en github)
+
+lo segundo que se debe hacer traer me lo.
+
+git clone url (https://github.com/Norvey/hyperblog-1.git)
+
+____________________________
+PULL REQUEST
+___________________________
+
+en GITHUB 
+se le da en newpull request
+despues q se verifica se le da el create pull request
+
+____________________________________
+OTRA FUENTE PARA HACER PULL  si quieres seguir el otro proyecto...
+___________________________________
+
+tener una rama para traer los cambios del proyecto que quiero
+
+git remote add upstream url (https://github.com/Norvey/hyperblog-1.git)
+
+git pull upstream master
+
+git commit -am"mensaje"
+
+git push origin master (a nuestro repositorio)
+
+
+
+______________________________________________
 
 
 

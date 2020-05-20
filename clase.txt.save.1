@@ -1,0 +1,353 @@
+Esta es la historia de Norvey Perez V.
+
+estaba aprendiedo a programar con Backen y JS
+
+todo empezo por una idea que tenia desde hace mas de un año
+
+sobre la secuencia
+que deben seguir los inspectores que realizan rtmyec
+
+pensando lo bien, todo esto puede funcionar.
+
+good luck
+
+se todo muy bien
+
+para ver la todos los cmabios que se realizaron se escribe el comando
+__________________________________________________________________
+git log archivo (prueba.txt)
+______________________________________________________________________________
+para ver los cambios que se realizaron entre cada commit se escribe el comando
+___________________________________________________________________
+git diff sepone el numero del primer commi  y el segundo commit
+_______________________________________________________________
+si queremos ver el primer archivo se debe
+
+entrar al log del archivo
+__________________________________________________________________
+git reset se pone el numero del commit hard (para q se resete todo y se borra todo)
+git reset se pone el numero del commit slow (se resetea pero se guarda los archivos en la memoria)
+_______________________________________________________________________________________
+con git log --stat  se ven los cambios especificios realizados a cada archivo
+
+se pueden tener varios archivos en el git? si, se pueden tener y a todos se les puede trabajar.
+_______________________________________________________________________________________
+para saber como era el archivo en cualquier punto se utiliza el comando
+
+git checkout se pone el numero del commit nombre de archivo ...
+
+___________________________________________________________________
+PARA AGREGAR LOS CAMBIOS NUEVOS SIN NECESIDD DE ESCRIBIR EL ADD .
+--------------------------------------------------------------------
+git commit -am "mensaje"  --- solo cuando ya exista el archivo anterior
+
+______________________
+CREAR RAMAS 
+_________________________
+se crea desde el lugar donde estoy
+
+git branch nombre de la rama 
+
+PARA MOVER ME EN LA RAMA Q CREER hay que poner el 
+
+git checkout y la rama en donde voy a estar.
+
+
+__________________________
+PARA SABER CUANTAS RAMAS TENGO
+----------------------------------------
+git branch --- como si fueras a crearla pero son escribir ramas--- todo bn
+
+_____________________________________
+MERGE 
+__________________________________
+
+ESTO SIRVE PARA UNIR LAS RAMAS QUE TENGAS
+
+este es el comando para unir las ramaas q tengas con tus colaboradores
+se debe poner en MASTER el head para poder hacer el MERGE sigue los paso
+
+git checkout master  (enter)
+
+git merge (nombre de la rama)
+
+____________________________________________-
+GIT HUB 
+_________________________________________
+es una repositorio en internet, se pueden hacer los mismos cmabio pero desde la web
+vamos a crear una cuenta--- user norve  emal norveypv ---
+lo que cambias en github no li tienes en tu consola y alreves
+
+comando para atraer los codigos desde el respositorio github
+
+git fesh nombre de archivo --- para traer de github
+ 
+git push nombre archivo  --- para mandar al github
+
+git pull nombre de archivo --. para traer y mandar a la vez--
+
+PRIMERO HAY QUE AGREGAR UN ORIGEN el comando es
+
+git remote add origin https://github.com/Norvey/hyperblog-platzi.git (esta direccion viene del github donde dice clonar)
+
+git remote  -- nos muestra los materes
+
+git remote -v muestra lo que hay dentro
+
+HASTA AQUI ESTAMOS LISTO VIENE LA INTERACION ENTRE CONSOLA Y WEB
+
+
+despues de hacer git push origin ---que es para enviar la informacion de tu master al github
+puede salirte esto  (no te preocupes solo es que no has hecho al integracion entre los dos)
+
+! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Norvey/hyperblog-platzi.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+debemos hacer lo siguiente para integrar (hacer integracion entre los dos ) podemos hacer
+git fesh origin master --- para traer
+git push origin master -- para mandar 
+
+o se puede hacer los dos a la vez con
+git pull origin master --- mandar - traer
+
+cuando es por primera vez nos puede arrojar este mensaje de precaucion
+
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 614 bytes | 614.00 KiB/s, done.
+From https://github.com/Norvey/hyperblog-platzi
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+fatal: refusing to merge unrelated histories
+
+para forzar la interacion hacemos lo siguiente
+
+git pull origin master --allow-unrelated-histories
+
+
+____________________________________________________
+LLAVES PUBLICAS Y PRIVADAS
+____________________________________________________
+
+proceso de crear llaves es algo algoritmico
+
+se deben crear llaves
+
+yo te mando a ti mi llave publica ---
+se deben crear las dos llaves, una publica y una privada
+
+crear llave, toca en el HOME
+
+sigue el comando 
+
+ssh-keygen -t rsa -b 4096 -C "norveypv@gmail.com" 
+
+(el 4096 es la complejida de la llave) -C (indica el correo)
+ahi pregunta donde va a guardar la llave, dale enter
+
+hay q revisar que si esta prendido el re
+
+eval $(ssh-agent -s)
+
+agregar la llave al sistema
+
+ssh-add (se escribe la ruta donde este la llave, solo la privada)
+
+_______________________________________________
+COMANDOS PARA VER LA HISTORIA DEL PROYECTO
+______________________________________________
+
+git log --all   --->mustra todo lo q ha hecho
+
+git log --all --graph  --> muestra de forma un pco mas grafica
+
+git log --all --graph --decorate --oneline  ---> un poco mas grafic
+
+
+________________________________________________
+CREAR ALIAS O ATAJOS
+_______________________________________________
+
+aveces los comandos son muy largos para acordarnos de todo los que tiene se
+pueden crear alias, veamos como se crean con ejemplos
+
+git log --all --graph --decorate --oneline --> como ves es muy largo para recordarlo lo que hacemos
+es muy sencillo
+
+alias nombre (nombre que le quieras dar) ="git log --all --graph --decorate --oneline"  listo
+
+para la clase pusimos 
+
+
+alias arbolito ="git log --all --graph --decorate --oneline"
+
+________________________________________
+CREAR TAG
+_______________________________________
+los tag sirven para hacerles versiones al proyecto para ir identificando cual
+seria el proyecto final para montarlo en la web
+
+pasos para crear TAG 
+
+primero  -copias el hash (numero de id que aparece al comienzo del commit)
+escribe el comando
+
+git tag -a v0.1 -m "mensaje" pegar el tag
+
+PARA SABER A DONDE ESTA CONECTADO EL TAG 
+
+git show-ref --tgas
+
+SE DEBE ENVIAR AL FINAL EL TAG A GITHUB /RECUERDA Q SIEMPRE SE DEBE TRAER LO Q ESTA EN EL GITHUD git pull origin master PRIMERO/
+
+git psuh origin --tags
+
+
+__________________________________
+BORRAR TAG
+__________________________________
+
+git tag ---> se pueden ver los tag q exiten
+
+git tag -d  nombre(nombre del tag que queremos borrar, -d es de delete)
+
+//en gihub no se borra directamente, si lo quiere borrar OJO los tag sirver como referencia y te pueden
+ayudar mas a delante, peri la desicion esta tomada, pon el siguiente comando//
+
+git push origin :refs/tagas/nombre(nombre del tag a borrar)
+
+________________________________-
+ENVIAR RAMAS AL GITHUB - INTERNET
+__________________________________
+
+git show-branch  --> nos muestras cuales son las ramas que exiten cual han sido sus histirias
+
+git show-branch --all --> nos muestrs lo mismo pero con más datos.
+
+gitk  --> abre en software toda la hostoria  (es solo una ayuda-- los programadores trabajand desde la terminal)
+
+para mandar las ramas, primero se crean las ramas
+
+git branch nombre de la ramma -->se crea
+
+entramos a master
+
+git push origin nombre de la rama
+
+_______________________________________
+PARA UNIRSE A UN PROYECTO EXITENT (OTRA PERSONA)
+_________________________________________________
+
+ponemos el comando
+
+git clone https:(aqui va la url q se copia en github) y listo
+
+esa persona puede trabajar en el proyecyo apartir de desde ahi 
+pero cuando vaya a ser un push origin master si no esta agregada no va a poder
+entonces hay q agregar a la persona
+
+PARA AGREGAR 
+___________
+
+desde el repositorio de la empresa.... 
+
+entrea a settign del repositorio
+
+Manage access--
+collaborators  y ahi se puede agregar.
+
+______________________________
+NOTA
+____________________________________
+ ---en mastar solo se envia cuando ya este todo listo...
+	----se debe trabajar con ramas....
+
+____________________
+UNIR LAS RAMAS
+___________________
+
+DESDE LA RAMA MASTER SE HACE EL MERGE....
+*master
+
+git merge origin nombre de rama... -->para combinar la rama a la master...
+git pull origin master --->traer se lo q este en github
+git push origin master ---> para mandar 
+
+
+____________________________________
+OPEN SOURCE
+_____________________________________
+
+Fork --->  es tomar una copia del proyecyo y hacerlo mio (solo publico)
+
+se le da en fork para copiar el proyecyo (parte superior derecha en github)
+
+lo segundo que se debe hacer traer me lo.
+
+git clone url (https://github.com/Norvey/hyperblog-1.git)
+
+____________________________
+PULL REQUEST
+___________________________
+
+en GITHUB 
+se le da en newpull request
+despues q se verifica se le da el create pull request
+
+____________________________________
+OTRA FUENTE PARA HACER PULL  si quieres seguir el otro proyecto...
+___________________________________
+
+tener una rama para traer los cambios del proyecto que quiero
+
+git remote add upstream url (https://github.com/Norvey/hyperblog-1.git)
+
+git pull upstream master
+
+git commit -am"mensaje"
+
+git push origin master (a nuestro repositorio)
+
+
+
+______________________________________________
+GIT IGNRAR ARCHIVOS (los archivos binarios no deberian subirse al respositorio)
+_________________________________________________________________________________
+
+EStos archivos se deben ignorar, para ello hacemos lo siguiente
+
+creamos un archivo a parte (depende del archivo, si es html crea otro html)
+
+deber arracncar por .gitignore (asi se debe guardar, esta sera una lista de los archivos a ignorar)
+
+synstais
+
+dentro del nuevo archivo (.gitignore)
+* mas la extension
+*jpge (ejemplo para ingnorar todos los archivo de esta extension)
+
+desde ahi se procede a realizar todo lo corcerniente a git
+
+git status para ver el estado (deber a parecer .gitignore, el archivo creado)
+
+git add .gitignore (para agregar este archivo)
+
+git status
+
+git commit -am "mensaje"
+
+git pull origin master
+
+git pus origin master  
+
+
+__________
+NOTA: TENGO QUE PRACTICAR MÁS
+ENTRE MÁS ESTUDIE MÁS SABRÉ

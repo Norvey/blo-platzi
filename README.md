@@ -1,4 +1,4 @@
-# blo-platzi  :tw-1f171: :tw-1f1f1: :tw-1f17e: :tw-1f1ec: 
+# blo-platzi 
 
 ### curso de platzi
 
